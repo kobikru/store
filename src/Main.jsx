@@ -20,9 +20,6 @@ function Main() {
         <Route path="/item/:itemId" element={<Product />} />
         <Route path="*" element={<h1>404</h1>} />
       </Routes>
-      {/* <CategoryList />
-      <Products />
-      <Product /> */}
     </main>
   );
 }
