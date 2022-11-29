@@ -6,7 +6,7 @@ function ProdactCard(props) {
   const { products, setProducts } = useContext(ContextData);
   return (
     <>
-      <div>
+      <div className="card">
         <h4>{props.title}</h4>
         <img className="card-img" src={props.image} alt=""></img>
         <p>{props.price}$</p>
