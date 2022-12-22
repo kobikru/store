@@ -1,0 +1,11 @@
+.card {
+  flex-grow: 1;
+
+  border-radius: 5%;
+  border: solid 2px;
+  text-align: center;
+  /* height: 15rem; */
+  width: 15rem;
+  margin: 2%;
+  padding: 2%;
+}

@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ProdactCard from "./components/ProdactCard";
+import ContextData from "./Context/ContextData";
 
-function Products(props) {
+function Products() {
   const [productsToShow, setProductsToShow] = useState([]);
   const { catName } = useParams();
-  console.log(catName);
+  const { products } = useContext(ContextData);
+
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/category/${catName}`)
+    fetch(`http://localhost:3000/api/products/categories/${catName}`)
       .then((res) => res.json())
       .then((data) => setProductsToShow(data));
   }, []);

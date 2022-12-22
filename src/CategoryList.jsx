@@ -6,10 +6,11 @@ import Category from "./components/Category";
 function CategoryList() {
   const { categories } = useContext(ContextData);
   return (
-    <div>
+    <div className="category-list">
       {categories.map((category) => (
         <Category key={category} category={category} />
       ))}
+      <tb></tb>
     </div>
   );
 }

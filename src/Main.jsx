@@ -7,20 +7,21 @@ import {
   Navigate,
 } from "react-router-dom";
 import CategoryList from "./CategoryList";
-import Product from "./Product";
 import Products from "./Products";
+import ProductCard from "./components/ProdactCard";
+import SingleProduct from "./SingleProduct";
 
 function Main() {
   return (
-    <main>
+    <div className="App">
       <Routes>
         <Route path="/" element={<Navigate to="/category" />} />
         <Route path="/category" element={<CategoryList />} />
         <Route path="/category/:catName" element={<Products />} />
-        <Route path="/item/:itemId" element={<Product />} />
+        <Route path="/product/:productId" element={<SingleProduct />} />
         <Route path="*" element={<h1>404</h1>} />
       </Routes>
-    </main>
+    </div>
   );
 }
 

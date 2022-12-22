@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import "../card.css";
 
 function Category(props) {
   const { category } = props;
   return (
-    <div className="category">
+    <div className="card category-list">
       <Link to={`${category}`}>
         <h1>{category}</h1>
       </Link>

@@ -1,7 +1,22 @@
 .App {
+  display: flex;
   text-align: center;
+  justify-content: center;
+
+  align-items: center;
 }
 
-.card {
+.header {
+  margin: 2%;
+  padding: 2%;
+  width: 20vw;
+  height: 10vw;
+  border-radius: 10%;
+  border: solid 2px;
   text-align: center;
+}
+.category-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
