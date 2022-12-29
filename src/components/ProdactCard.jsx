@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import ContextData from "../Context/ContextData";
+import ContextData from "../context/ContextData";
 import "./ProdactCard.css";
 
 function ProdactCard(props) {
-  const { products, setProducts } = useContext(ContextData);
+  const { products, setProducts, add, remove } = useContext(ContextData);
   return (
     <>
       <div className="card">
@@ -14,6 +14,27 @@ function ProdactCard(props) {
         <img className="card-img" src={props.image} alt=""></img>
         <p>{props.price}$</p>
       </div>
+      {/* <div>
+        <button
+          onClick={() => {
+            remove(props);
+          }}
+        >
+          -
+        </button>
+        <button>
+          {props.find((x) => x.id == products.id)
+            ? props.find((x) => x.id == props.idd).qty
+            : 0}
+        </button>
+        <button
+          onClick={() => {
+            add(props);
+          }}
+        >
+          +
+        </button>
+      </div> */}
     </>
   );
 }

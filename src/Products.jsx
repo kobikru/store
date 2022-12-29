@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ProdactCard from "./components/ProdactCard";
-import ContextData from "./Context/ContextData";
+import ContextData from "./context/ContextData";
 
 function Products() {
   const [productsToShow, setProductsToShow] = useState([]);
@@ -9,7 +9,7 @@ function Products() {
   const { products } = useContext(ContextData);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/products/categories/${catName}`)
+    fetch(`http://localhost:3001/api/products/categories/${catName}`)
       .then((res) => res.json())
       .then((data) => setProductsToShow(data));
   }, []);

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import ContextData from "./Context/ContextData";
-import Category from "./components/Category";
+import ContextData from "../../context/ContextData";
+import Category from "../Category";
 
 function CategoryList() {
   const { categories } = useContext(ContextData);

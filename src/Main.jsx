@@ -6,14 +6,16 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import CategoryList from "./CategoryList";
+import CategoryList from "./components/Categorylist/CategoryList";
 import Products from "./Products";
 import ProductCard from "./components/ProdactCard";
-import SingleProduct from "./SingleProduct";
+import SingleProduct from "./components/SingleProduct/SingleProduct";
+import Cart from "./components/Cart/Cart";
 
 function Main() {
   return (
     <div className="App">
+      {/* <Cart /> */}
       <Routes>
         <Route path="/" element={<Navigate to="/category" />} />
         <Route path="/category" element={<CategoryList />} />

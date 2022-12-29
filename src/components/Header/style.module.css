@@ -1,0 +1,18 @@
+.header {
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.companyName {
+  color: antiquewhite;
+  font-weight: bold;
+  font-size: 20px;
+}
+.companyName > span {
+  color: var(--primary);
+  font-weight: bolder;
+}
+.navbar {
+}
